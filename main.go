@@ -19,7 +19,7 @@ func main() {
 		errorLog.Printf("環境変数を読み込み出来ませんでした: %v", err)
 	}
 
+	//動画詳細の出力
 	youtube_movieId := "RbDcICCxm5k"
-
 	apis.YoutubeRequest(youtube_movieId)
 }
