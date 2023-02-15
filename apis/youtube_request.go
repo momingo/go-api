@@ -25,6 +25,7 @@ type Thumbnail struct {
 
 type Sni struct {
 	PublishedAt          string    `json:"publishedAt"`
+	ChannelId            string    `json:"channelId"`
 	Title                string    `json:"title"`
 	Description          string    `json:"description"`
 	Thumbnails           Thumbnail `json:"thumbnails"`
@@ -50,7 +51,7 @@ type YoutubeVideoData struct {
 }
 
 func (me *YoutubeVideoData) String() string {
-	return fmt.Sprintf("チャンネル名: %s\n動画タイトル: %s\n再生数: %s", me.Items[0].Snippet.ChannelTitle, me.Items[0].Snippet.Title, me.Items[0].Statistics.ViewCount)
+	return fmt.Sprintf("チャンネル名: %s\nチャンネルID: %s\n動画タイトル: %s\n再生数: %s", me.Items[0].Snippet.ChannelTitle, me.Items[0].Snippet.ChannelId, me.Items[0].Snippet.Title, me.Items[0].Statistics.ViewCount)
 }
 
 var (

@@ -20,6 +20,6 @@ func main() {
 	}
 
 	//動画詳細の出力
-	youtube_movieId := "RbDcICCxm5k"
+	youtube_movieId := "eu7EqtVZ-Jo&t=23s"
 	apis.YoutubeRequest(youtube_movieId)
 }
